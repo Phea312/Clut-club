@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fake Store</title>
+    <title>Phea Store</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3.4.21/dist/vue.global.prod.js"></script>
@@ -24,7 +24,7 @@
 
       <!-- Header -->
       <header class="bg-white shadow-md rounded-xl p-5 mb-6 sticky top-0 z-50 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <h1 class="text-3xl font-extrabold text-blue-700">Clute Club</h1>
+        <h1 class="text-3xl font-extrabold text-blue-700">Phea Store Ng ha</h1>
 
         <!-- Search -->
         <div class="flex-grow w-full sm:mx-6">
@@ -37,14 +37,18 @@
         </div>
 
         <!-- Cart Button -->
-        <button
-          @click="showCart"
-          class="relative inline-flex items-center gap-2 px-5 py-2 text-blue-700 border border-blue-600 rounded-lg hover:bg-blue-100 transition disabled:opacity-50 disabled:cursor-not-allowed"
-          :disabled="totalQty === 0"
-        >
-          🛒 <span class="font-semibold">Cart</span>
-          <span class="bg-blue-600 text-white text-xs font-bold rounded-full px-2 py-0.5">{{ totalQty }}</span>
-        </button>
+      <button
+  @click="showCart"
+  class="relative inline-flex items-center gap-2 px-6 py-3 text-white bg-blue-600 rounded-full shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition disabled:opacity-50 disabled:cursor-not-allowed"
+  :disabled="totalQty === 0"
+>
+  🛒 
+  <span class="font-semibold">Cart</span>
+  <span class="bg-white text-blue-600 text-xs font-bold rounded-full px-2 py-0.5">
+    {{ totalQty }}
+  </span>
+  </button>
+
       </header>
 
       <!-- Product Grid -->
